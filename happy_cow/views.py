@@ -1,6 +1,7 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .blockchain import blockchain
+
 
 def produtor_view(request, id_produtor):
 
@@ -20,5 +21,16 @@ def produtor_criar(request):
 
     if request.method == "POST":
         pass
+    elif request.method == "GET": 
+        pass
+    else:
+        return redirect('produtor_view')
 
+def produtor_cattle(request, id_produtor):
+    pass
 
+def transfer2producer(request, id_produtor):
+    pass
+
+def transfer2frigo(request, id_produtor):
+    pass
