@@ -49,7 +49,7 @@ class blockchain():
         # else:
             # print('Error!')
 
-        @staticmethod
+    @staticmethod
     def get_all_producers():
 
         response = requests.get(
