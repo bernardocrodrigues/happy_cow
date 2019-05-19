@@ -17,19 +17,25 @@ class blockchain():
     def get_all_cattle(producer_id):
 
         return [
-            {'raca': 'Angus',
-             'pai': 123,
-             'mae': 345,
+            {
+             'id'  : 0x5F67,
+             'raca': 'Angus',
+             'pai' : 0XA123,
+             'mae' : 345,
              'peso': 300,
              'nascimento': datetime.datetime.now()},
-            {'raca': 'Angus',
-             'pai': 123,
-             'mae': 345,
+            {
+             'id'  : 0x5A56,
+             'raca': 'Mimosa',
+             'pai' : 0XE123,
+             'mae' : 345,
              'peso': 300,
              'nascimento': datetime.datetime.now()},
-            {'raca': 'Angus',
-             'pai': 123,
-             'mae': 345,
+            {
+             'id'  : 0xE45F,
+             'raca': 'De Lorean',
+             'pai' : 0XC123,
+             'mae' : 0XB345,
              'peso': 300,
              'nascimento': datetime.datetime.now()},
         ]
