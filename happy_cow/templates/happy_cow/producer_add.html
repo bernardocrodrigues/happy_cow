@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MeatChain Producer</title>
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <div style="color: #DD4040;">Meat</div>Chain
+        </div>
+        <div class="ball-brand"></div>
+        <div>Producer</div>
+    </div>
+    <div class="content">
+        <div class="page-call">
+            Fill the Animal Data
+        </div>
+        <div class="divider">
+            <div class="form-add-animal">
+                <div class="form-label">Race</div>
+                <input type="text" class="input-text" />
+                <div class="form-label">Father</div>
+                <input type="text" class="input-text"/>
+                <div class="form-label">Mother</div>
+                <input type="text" class="input-text"/>
+                <div class="form-label">Weight</div>
+                <input type="text" class="input-text"/>
+                <div class="form-label">Father</div>
+                <input type="text" class="input-text"/>
+                <button class="submit-button">Submit</button>
+            </div>
+
+            <div class="cow-image"></div>
+        </div>
+    </div>
+
+</body>
+<style>
+    body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        font-family: 'Allerta Stencil', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        font-size: 48px;
+        padding: 32px;
+        background-color: #242424;
+        color: #fff;
+    }
+
+    .ball-brand {
+        width: 16px;
+        height: 16px;
+        margin-left: 8px;
+        margin-right: 8px;
+        background-color: #DD4040;
+        content: '';
+        border-radius: 50px;
+        flex-shrink: 1;
+    }
+
+    .content {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .page-call {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 64px;
+        color: #242424;
+        padding: 40px;
+        display: flex;
+    }
+
+    .action-buttons-group {
+        display: flex;
+        padding: 24px 40px;
+        padding-top: 0;
+    }
+
+    .form-add-animal {
+        display: flex;
+        flex-direction: column;
+        margin: 0 40px;
+        width: 50%;
+    }
+
+    .input-text {
+        width: 100%;
+        margin: 8px 0;
+        padding: 8px;
+        color:#DD4040;
+        border-radius: 4px;
+        border: 1px solid #DD4040;
+    }
+
+    .form-label {
+        margin-top: 8px;
+        font-size: 24px;
+    }
+
+    .submit-button {
+        margin-top: 16px;
+        width: 120px;
+        padding: 8px 16px;
+        border: 1px solid #DD4040;
+        background-color: #fff;
+        color: #dd4040;
+        border-radius: 4px;
+    }
+    .cow-image {
+        width: 50%;
+        content: '';
+        /* background-color: #222222; */
+        /* background-image: url("https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=721&q=80"); */
+        /* background-size: contain;
+        background-repeat: no-repeat; */
+
+    }
+
+    .divider {
+        display: flex;
+        flex-direction: row;
+        /* height: 80vh; */
+    }
+    
+</style>
+
+</html>
