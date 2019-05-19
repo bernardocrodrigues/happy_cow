@@ -5,6 +5,8 @@ import datetime, json
 import requests
 
 bc_address = 'http://127.0.0.1/anything'
+url = "http://10.0.1.244:4000/channels/canal-contrato/chaincodes/contratoCC"
+jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTgyNzY0ODMsIm5vbWUiOiJOYWRpbmUiLCJvcmciOiJQcm9kdXRvciIsImlhdCI6MTU1ODI0MDQ4M30.AlhEzcR-SF7BMP4YbzQVVkh-DtJWibq9VVYO8hPBe5Y"
 
 class blockchain():    
 
@@ -18,30 +20,25 @@ class blockchain():
     @staticmethod
     def get_all_cattle(producer_id):
 
-        return [
-            {
-             'id'  : 0x5F67,
-             'raca': 'Angus',
-             'pai' : 0XA123,
-             'mae' : 345,
-             'peso': 300,
-             'nascimento': datetime.datetime.now()},
-            {
-             'id'  : 0x5A56,
-             'raca': 'Mimosa',
-             'pai' : 0XE123,
-             'mae' : 345,
-             'peso': 300,
-             'nascimento': datetime.datetime.now()},
-            {
-             'id'  : 0xE45F,
-             'raca': 'De Lorean',
-             'pai' : 0XC123,
-             'mae' : 0XB345,
-             'peso': 300,
-             'nascimento': datetime.datetime.now()},
-        ]
+        clean = {            
+            'dono': producer_id
+        }
+       
+        clean = json.dumps(clean)
 
+        payload = {
+            "peers": ["peer0.produtor.dominio.com"],
+            "fcn": "queryBois",
+            "args": [clean]
+        }
+
+        response = requests.post(
+        url, headers={"Authorization": "Bearer " + jwt}, json=payload)                
+
+        if response.status_code == 200:
+            print('Success!')
+        else:
+            print('Error!')
         # response = requests.get(
         # bc_address, 
         # headers={'Producer_id': producer_id}
@@ -53,6 +50,17 @@ class blockchain():
 
     @staticmethod
     def get_all_producers():
+    #     clean = {            
+    #         'dono': producer_id
+    #     }
+       
+    #    clean = json.dumps(clean)
+
+    #     payload = {
+    #         "peers": ["peer0.produtor.dominio.com"],
+    #         "fcn": "criarBoi",
+    #         "args": [clean]
+    #     }
 
         response = requests.get(
                                 bc_address
@@ -66,10 +74,7 @@ class blockchain():
             return {}
 
     @staticmethod
-    def create_cattle(producer_id, race, father, mother, weight):
-
-        url = "http://10.0.1.244:4000/channels/canal-contrato/chaincodes/contratoCC"
-        jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTgyNzY0ODMsIm5vbWUiOiJOYWRpbmUiLCJvcmciOiJQcm9kdXRvciIsImlhdCI6MTU1ODI0MDQ4M30.AlhEzcR-SF7BMP4YbzQVVkh-DtJWibq9VVYO8hPBe5Y"
+    def create_cattle(producer_id, race, father, mother, weight):       
 
         clean = {
             'raca':  race,
@@ -81,10 +86,7 @@ class blockchain():
             'vivo': True
         }
 
-        # clean = json.dumps(clean).replace("\"", "\\\"").replace(" ", "").replace("\n", "")
         clean = json.dumps(clean)
-
-        #print(clean)
 
         payload = {
             "peers": ["peer0.produtor.dominio.com"],
@@ -92,15 +94,8 @@ class blockchain():
             "args": [clean]
         }
 
-        # print(request.POST)
-
         response = requests.post(
             url, headers={"Authorization": "Bearer " + jwt}, json=payload)                
-
-        # response = requests.post(bc_address,
-        #                          data = payload_dict
-        #                         headers={'Token': token}
-        #)
 
         if response.status_code == 200:
             print('Success!')
