@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="reset.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'happy_cow/reset.css' %}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MeatChain Producer</title>
 </head>
@@ -23,56 +24,30 @@
             View your animals
         </div>
         <div class="cards">
+
+            {% for i in bois %}
+
             <div class="card-animal">
                 <div class="card-header">
-                        <div class="card-label"><div class="card-info-name">ID:</div> 1234567788</div>
-                        <div class="card-label"><div class="card-info-name">Race:</div> 1234567788</div>
-                        <div class="card-label"><div class="card-info-name">Father:</div> 1234567788</div>
-                        <div class="card-label"><div class="card-info-name">Mother:</div> 1234567788</div>
-                        <div class="card-label"><div class="card-info-name">Weight:</div> 1234567788</div>
+                        <div class="card-label"><div class="card-info-name">ID:</div> {{ i.id }} </div>
+                        <div class="card-label"><div class="card-info-name">Race:</div> {{ i.raca }} </div>
+                        <div class="card-label"><div class="card-info-name">Father:</div> {{ i.pai }} </div>
+                        <div class="card-label"><div class="card-info-name">Mother:</div> {{ i.mae }} </div>
+                        <div class="card-label"><div class="card-info-name">Weight:</div> {{ i.peso }} </div>
                 </div>
                 <div class="card-footer">
                     <div class="buttons-label">Transfer to...</div>
                     <div class="card-buttons">
-                        <div class="button-other-producer">Other Producer</div>
-                        <div class="button-refrigeration-company">Refrigeration Company</div>
+
+                        <a class="button-other-producer" href="/produtor/{{ id }}/cattle/transfer2producer/{{ i.id }}">Other Producer</a>
+
+                        <a class="button-refrigeration-company" href="/produtor/{{ id }}/cattle/transfer2frigo/{{ i.id }}" >Refrigeration Company</a>
                     </div>
                 </div>
             </div>
 
-            <div class="card-animal">
-                    <div class="card-header">
-                            <div class="card-label"><div class="card-info-name">ID:</div> 1234567788</div>
-                            <div class="card-label"><div class="card-info-name">Race:</div> 1234567788</div>
-                            <div class="card-label"><div class="card-info-name">Father:</div> 1234567788</div>
-                            <div class="card-label"><div class="card-info-name">Mother:</div> 1234567788</div>
-                            <div class="card-label"><div class="card-info-name">Weight:</div> 1234567788</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="buttons-label">Transfer to...</div>
-                        <div class="card-buttons">
-                            <div class="button-other-producer">Other Producer</div>
-                            <div class="button-refrigeration-company">Refrigeration Company</div>
-                        </div>
-                    </div>
-            </div>
+            {% endfor %}
 
-            <div class="card-animal">
-                    <div class="card-header">
-                            <div class="card-label"><div class="card-info-name">ID:</div> 1234567788</div>
-                            <div class="card-label"><div class="card-info-name">Race:</div> 1234567788</div>
-                            <div class="card-label"><div class="card-info-name">Father:</div> 1234567788</div>
-                            <div class="card-label"><div class="card-info-name">Mother:</div> 1234567788</div>
-                            <div class="card-label"><div class="card-info-name">Weight:</div> 1234567788</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="buttons-label">Transfer to...</div>
-                        <div class="card-buttons">
-                            <div class="button-other-producer">Other Producer</div>
-                            <div class="button-refrigeration-company">Refrigeration Company</div>
-                        </div>
-                    </div>
-            </div>
         </div>   
 
 </body>
