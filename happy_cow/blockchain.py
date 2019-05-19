@@ -25,7 +25,10 @@ class blockchain():
 
         ]
 
-
     @classmethod
     def create_cattle(producer_id, ):
         pass
+
+
+if __name__ == "__main__":
+    pass
