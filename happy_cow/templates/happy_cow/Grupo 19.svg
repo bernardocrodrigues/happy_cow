@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90.671" height="44.679" viewBox="0 0 90.671 44.679">
+  <g id="Grupo_19" data-name="Grupo 19" transform="translate(-675.637 -673.52)">
+    <path id="Caminho_33" data-name="Caminho 33" d="M.008,9.024C-.267,4.384,6.47-.737,12.107.088S28.02,13.561,27.779,22.5,15.544,45.182,8.532,36.246s3.093-11.72,2.062-17.185S.283,13.664.008,9.024Z" transform="translate(723.502 694.384) rotate(121)" fill="#eee"/>
+    <path id="Caminho_34" data-name="Caminho 34" d="M.008,30.122c-.275,4.64,6.462,9.761,12.1,8.936S28.02,25.585,27.779,16.649,15.544-6.036,8.532,2.9s3.093,11.72,2.062,17.185S.283,25.482.008,30.122Z" transform="translate(751.999 673.52) rotate(59)" fill="#eee"/>
+    <path id="Caminho_35" data-name="Caminho 35" d="M.009,5.884C-.22,2.025,4.119-.576,8.807.11S22.756,10.687,22.556,18.12,13.143,36.83,7.311,29.4c-2.094-2.668-.736-3.557,0-5.366,1.2-2.964,3.523-6.16,2.973-9.074C9.427,10.413.237,9.743.009,5.884Z" transform="translate(719.535 695.211) rotate(121)" fill="#dd4040"/>
+    <path id="Caminho_36" data-name="Caminho 36" d="M.009,25.947c-.229,3.859,4.111,6.46,8.8,5.774s13.948-10.578,13.748-18.01S13.143-5,7.311,2.434C5.218,5.1,6.575,5.99,7.311,7.8c1.2,2.964,3.523,6.16,2.973,9.074C9.427,21.418.237,22.088.009,25.947Z" transform="translate(749.695 678.115) rotate(59)" fill="#dd4040"/>
+    <g id="Retângulo_71" data-name="Retângulo 71" transform="translate(710.277 695.611)" fill="#dd4040" stroke="#eee" stroke-width="1">
+      <rect width="21.052" height="3.509" rx="1.754" stroke="none"/>
+      <rect x="0.5" y="0.5" width="20.052" height="2.509" rx="1.254" fill="none"/>
+    </g>
+    <circle id="Elipse_17" data-name="Elipse 17" cx="1.403" cy="1.403" r="1.403" transform="translate(689.225 690.699)" fill="#fff"/>
+    <circle id="Elipse_18" data-name="Elipse 18" cx="1.403" cy="1.403" r="1.403" transform="translate(749.575 690.699)" fill="#fff"/>
+  </g>
+</svg>
