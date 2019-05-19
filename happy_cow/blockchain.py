@@ -49,6 +49,20 @@ class blockchain():
         # else:
             # print('Error!')
 
+        @staticmethod
+    def get_all_producers():
+
+        response = requests.get(
+                                bc_address
+        #                        headers={'Token': token}
+        )
+        if response.status_code == 200:
+            print('Success!')
+            return response.content
+        else:
+            print('Error!')
+            return {}
+
     @staticmethod
     def create_cattle(producer_id, race, father, mother, weight):
         
@@ -58,7 +72,10 @@ class blockchain():
                         'mother'      : mother,
                         'weight'      : weight}
 
-        response = requests.post(bc_address, data = payload_dict)
+        response = requests.post(bc_address,
+                                 data = payload_dict
+        #                         headers={'Token': token}
+        )
 
         if response.status_code == 200:
             print('Success!')
