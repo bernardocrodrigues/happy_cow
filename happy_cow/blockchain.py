@@ -1,11 +1,13 @@
 
 import datetime
+import requests
 
 
 class blockchain():
 
     @staticmethod
     def get_cattle(producer_id):
+
         return [
             {'raca': 'Angus',
              'pai': 123,
@@ -25,8 +27,12 @@ class blockchain():
 
         ]
 
-    @classmethod
+    @staticmethod
     def create_cattle(producer_id, ):
+        pass
+
+    @staticmethod
+    def transfer_cattle(origin_id, destination_id):
         pass
 
 
